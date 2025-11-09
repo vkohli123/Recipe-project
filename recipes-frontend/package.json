@@ -1,0 +1,50 @@
+{
+  "name": "recipes-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage --reporter=lcov"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.292.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.0.0",
+  "vitest": "^4.0.8",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "jsdom": "^22.1.0",
+    "@vitest/coverage-v8": "^4.0.8"
+  }
+,
+  "vitest": {
+    "test": {
+      "environment": "jsdom",
+      "globals": true,
+      "setupFiles": "./src/setupTests.js"
+    }
+    ,
+    "coverage": {
+      "provider": "c8",
+      "reporter": ["text", "lcov"],
+      "all": true,
+      "lines": 80,
+      "statements": 80,
+      "branches": 70,
+      "functions": 80
+    }
+  }
+}

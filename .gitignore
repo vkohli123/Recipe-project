@@ -1,0 +1,71 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+__MACOSX/
+
+# Node / Vite
+node_modules/
+dist/
+.tmp/
+.temp/
+.eslintcache
+.npm/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+.vite/
+.temp/
+coverage/
+.nyc_output/
+
+# Env files
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.sw?
+*.sublime*
+.history/
+
+# Java / Maven
+.target/
+target/
+**/target/
+.classpath
+.project
+.settings/
+.mvn/timing.properties
+
+# Build output
+build/
+**/build/
+
+# Misc
+Thumbs.db
+.DS_Store?
+*.seed
+*.pid
+*.pid.lock
+
+# Frontend artifacts
+vite.svg

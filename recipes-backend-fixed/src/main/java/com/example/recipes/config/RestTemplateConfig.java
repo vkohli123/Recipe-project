@@ -1,0 +1,24 @@
+package com.example.recipes.config;
+
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+// no low-level HttpClient imports needed for now
+import org.springframework.retry.annotation.EnableRetry;
+import org.springframework.web.client.RestTemplate;
+
+import java.time.Duration;
+
+@Configuration
+@EnableRetry
+public class RestTemplateConfig {
+
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        // sensible default timeouts
+        return builder
+                .setConnectTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(10))
+                .build();
+    }
+}
